@@ -3,10 +3,12 @@ import './Comentario.css'
 
 
 //JSX   -- sintaxe que usa dentro do HTML, precisa importar
-const Comentario = () => (
+const Comentario = props => (
     <div className="Comentario">
-        <div>Zoro</div>
-        <div>Olá, tudo bem?!</div>
+        <h2>{props.nome}</h2>
+        <p>{props.email}</p>
+        <p>{props.children}</p>
+        <p>{props.date.toString()}</p>
     </div>
 
 )
