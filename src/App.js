@@ -21,6 +21,21 @@ class App extends Component {
       }
     ]
   }
+  adicionarComentario = () => {
+    console.log("Adicionando comentario...")
+
+    const novoComentario = {
+      nome: 'Nami',
+      email: 'nami@gmail.com',
+      date: new Date(2018, 9, 18),
+      mensagem: 'Olá pessoal !!'
+    }
+
+    this.setState({
+      comentarios: [...this.state.comentarios, novoComentario]
+    }) // Feito de maneira mais bonita e menos linhas
+
+  }
 
   render() {
 
@@ -39,10 +54,7 @@ class App extends Component {
 
         ))}
 
-
-        {/*<Comentario nome="Nami" email="nami@gmail.com" date={new Date(2018, 9, 18)}>
-          Vou ficar rica !
-        </Comentario >*/}
+        <button onClick={this.adicionarComentario}>Adicionar um comentário</button>
       </div>
     );
   }
