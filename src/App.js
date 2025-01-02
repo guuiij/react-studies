@@ -19,22 +19,25 @@ class App extends Component {
         date: new Date(2025, 1, 1),
         mensagem: 'Eu sou um médico',
       }
-    ]
-  }
-  adicionarComentario = () => {
-    console.log("Adicionando comentario...")
-
-    const novoComentario = {
-      nome: 'Nami',
-      email: 'nami@gmail.com',
-      date: new Date(2018, 9, 18),
-      mensagem: 'Olá pessoal !!'
+    ],
+    novoComentario: {
+      nome: '',
+      email: '',
+      mensagem: ''
     }
-
+  }
+  adicionarComentario = evento => {
+    evento.preventDefault();
+    const novoComentario = { ...this.state.novoComentario, date: new Date() }
     this.setState({
-      comentarios: [...this.state.comentarios, novoComentario]
-    }) // Feito de maneira mais bonita e menos linhas
+      comentarios: [...this.state.comentarios, novoComentario],
+      novoComentario: { nome: '', email: '', mensagem: '' }
+    })
 
+  }
+  digitacao = evento => {
+    const { name, value } = evento.target;
+    this.setState({ novoComentario: { ...this.state.novoComentario, [name]: value } })
   }
 
   render() {
@@ -54,7 +57,34 @@ class App extends Component {
 
         ))}
 
-        <button onClick={this.adicionarComentario}>Adicionar um comentário</button>
+        <form method="post" onSubmit={this.adicionarComentario}>
+          <h2>Adicionar Comentário</h2>
+          <div>
+            <input
+              type="text"
+              name="nome"
+              value={this.state.novoComentario.nome}
+              onChange={this.digitacao} // cada vez que digiar uma tecla dispara o evento digitação do nome
+              placeholder="Digite seu nome" />
+          </div>
+          <div>
+            <input
+              type="email"
+              name="email"
+              value={this.state.novoComentario.email}
+              onChange={this.digitacao}
+              laceholder="Digite seu email" />
+          </div>
+          <div>
+            <textarea
+              name="mensagem"
+              value={this.state.novoComentario.mensagem}
+              onChange={this.digitacao}
+              rows="4"></textarea>
+          </div>
+          <button type="submit">Adicionar Comentário</button>
+        </form>
+
       </div>
     );
   }
