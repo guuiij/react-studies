@@ -6,11 +6,14 @@ Este repositório contém meus estudos de React, organizados em módulos e subco
 
 ## Módulos
 
-### 1. **Conceitos Básicos**
+### 1. **Conceitos Básicos e Sintaxe**
    - **Aulas:**
      - Introdução ao React.
      - Criando componentes.
      - Propriedades dos componentes.
+     - Estado da aplicação
+     - Tratamento de eventos
+     - Interação entre componentes
    - **Mini-projeto:** Aplicação com conceitos básicos.
 
 ### 2. **Requisições HTTP/Ajax**
