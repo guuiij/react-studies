@@ -53,3 +53,28 @@ border: none;
 .Novo-Comentario button:hover {
 background-color: #2b6cb0;
 }
+
+.Editar-Comentario {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.Editar-Comentario input,
+.Editar-Comentario button {
+  margin-right: 5px;
+  padding: 5px;
+}
+.Editar-Comentario button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.Editar-Comentario button:hover {
+  background-color: #0056b3;
+}
