@@ -8,13 +8,13 @@ class App extends Component {
       {
         nome: "Brook",
         email: "brook@gmail.com",
-        date: new Date(2025, 1, 1),
+        date: new Date(2025, 1, 1, 17, 30 ,6),
         mensagem: "Yo ho-ho~",
       },
       {
         nome: "Chopper",
         email: "chopper@gmail.com",
-        date: new Date(2025, 1, 1),
+        date: new Date(2025, 1, 1, 8, 24, 23),
         mensagem: "Eu sou um médico",
       },
     ],
