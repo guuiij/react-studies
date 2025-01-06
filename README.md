@@ -14,6 +14,8 @@ Este repositório contém meus estudos de React, organizados em módulos e subco
      - Estado da aplicação
      - Tratamento de eventos
      - Interação entre componentes
+     - Estilo dos componentes 
+     - Editar/Cancelar e salvar Comentário 
    - **Mini-projeto:** Aplicação com conceitos básicos.
 
 ### 2. **Requisições HTTP/Ajax**
